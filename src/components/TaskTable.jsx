@@ -17,7 +17,7 @@ const TaskTable = ({ tasks, columns }) => {
 
   return (
     <div className="overflow-x-auto rounded-lg shadow-md">
-      <div className="h-[480px] xl:h-screen overflow-y-auto -mt-1">
+      <div className="max-h-[480px] xl:max-h-screen overflow-y-auto -mt-1">
         <table className="min-w-full border-collapse border border-gray-300">
           <thead className="bg-blue-500 text-white sticky top-0  ">
             {table.getHeaderGroups().map((headerGroup) => (
