@@ -20,7 +20,7 @@ const AddTaskModal = ({ isOpen, onClose, addTask }) => {
       notifyWarning("Please fill in all required fields.");
       return;
     }
-    addTask({ title, description, status }); // <-- use addTask here
+    addTask({ title, description, status });
     onClose();
     setTitle("");
     setDescription("");
