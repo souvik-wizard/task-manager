@@ -6,7 +6,7 @@ const TaskField = ({ task, field, updateTaskField }) => {
 
   const handleBlur = () => {
     console.log("Field Updated:", field);
-    if (value !== task[field]) {
+    if (value.trim() !== "" && value.trim() !== task[field].trim()) {
       updateTaskField(task.id, field, value);
       console.log("Field Updated:", field.toUpperCase(), value, task.id);
       notifySuccess(

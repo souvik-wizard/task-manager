@@ -2,7 +2,6 @@ import React from "react";
 
 const FilterDropdown = ({ setFilterStatus }) => {
   const handleChange = (e) => {
-    console.log("Filter Status:", e.target.value);
     setFilterStatus(e.target.value);
   };
 

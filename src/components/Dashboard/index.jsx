@@ -184,19 +184,15 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container w-11/12 mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
+    <div className="container w-11/12 mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-8 mx-auto text-center">Dashboard</h1>
       <TaskCounters counters={counters} />
       <div className="flex flex-col md:flex-row w-full items-center justify-between gap-4 lg:gap-8 mb-4">
         <AddTaskButton onAdd={() => setModalOpen(true)} />
         <SearchBar setSearchText={setSearchText} />
         <FilterDropdown setFilterStatus={setFilterStatus} />
       </div>
-      <TaskTable
-        tasks={filteredTasks}
-        columns={columns}
-        updateTaskField={updateTaskField}
-      />
+      <TaskTable tasks={filteredTasks} columns={columns} />
       <AddTaskModal
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
