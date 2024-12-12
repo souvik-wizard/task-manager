@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { notifyWarning } from "../utils/toast";
 
-const AddTaskModal = ({ isOpen, onClose, onAdd }) => {
+const AddTaskModal = ({ isOpen, onClose, addTask }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("To Do");
@@ -20,7 +20,7 @@ const AddTaskModal = ({ isOpen, onClose, onAdd }) => {
       notifyWarning("Please fill in all required fields.");
       return;
     }
-    onAdd({ title, description, status });
+    addTask({ title, description, status }); // <-- use addTask here
     onClose();
     setTitle("");
     setDescription("");
@@ -32,7 +32,7 @@ const AddTaskModal = ({ isOpen, onClose, onAdd }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-6 rounded-lg w-96 shadow-lg">
+      <div className="bg-white p-6 rounded-lg max-w-96 shadow-lg w-11/12">
         <h2 className="text-xl font-bold mb-4">Add New Task</h2>
 
         <div className="mb-4">
