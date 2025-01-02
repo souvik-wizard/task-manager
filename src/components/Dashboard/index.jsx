@@ -9,6 +9,7 @@ import FilterDropdown from "../FilterDropdown";
 import SearchBar from "../SearchBar";
 import TaskCounters from "../TaskCounters";
 import TaskTable from "../TaskTable";
+import Assignemnt from "../Assignemnt";
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([]);
@@ -185,7 +186,7 @@ const Dashboard = () => {
 
   return (
     <div className="container w-11/12 mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 mx-auto text-center">Dashboard</h1>
+      {/* <h1 className="text-3xl font-bold mb-8 mx-auto text-center">Dashboard</h1>
       <TaskCounters counters={counters} />
       <div className="flex flex-col md:flex-row w-full items-center justify-between gap-4 lg:gap-8 mb-4">
         <AddTaskButton onAdd={() => setModalOpen(true)} />
@@ -197,7 +198,9 @@ const Dashboard = () => {
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
         addTask={addTask}
-      />
+      /> */}
+
+      <Assignemnt />
     </div>
   );
 };
